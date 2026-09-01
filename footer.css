@@ -1,0 +1,91 @@
+/* ===== Спільний футер (автономний, однаковий на всіх сторінках) ===== */
+footer.site-footer {
+    background-color: #0a0a0a;
+    color: #c9c9c9;
+    padding: 4rem 0 2rem;
+    margin-top: 0;
+}
+.site-footer .footer-inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+.site-footer .footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.site-footer .footer-brand img {
+    height: 2.25rem;
+    width: auto;
+}
+.site-footer .footer-brand span {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+.site-footer .footer-tagline {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.site-footer .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    margin-bottom: 2rem;
+}
+.site-footer .footer-nav a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+.site-footer .footer-nav a:hover {
+    color: #ffffff;
+}
+.site-footer .footer-nav__sep {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+.site-footer .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.site-footer .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.site-footer .footer-social a:hover {
+    background-color: var(--lp-brand, #e8542f);
+    border-color: var(--lp-brand, #e8542f);
+}
+.site-footer .footer-social svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.site-footer .footer-bottom {
+    border-top: 1px solid rgba(250, 249, 246, 0.1);
+    padding-top: 2rem;
+}
+.site-footer .footer-copy {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
