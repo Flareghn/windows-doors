@@ -1262,9 +1262,25 @@ video {
     --lp-sub-5-on: var(--lp-paper)
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow-x: hidden;
-    max-width: 100vw
+}
+
+@supports (overflow: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
+@media (max-width:767px) {
+    [data-aos] {
+        transform: none !important;
+    }
 }
 
 body,

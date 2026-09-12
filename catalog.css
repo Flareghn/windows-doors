@@ -425,14 +425,6 @@ video {
     margin-bottom: 2rem
 }
 
-.ml-2 {
-    margin-left: .5rem
-}
-
-.mt-1 {
-    margin-top: .25rem
-}
-
 .mt-3 {
     margin-top: .75rem
 }
@@ -465,10 +457,6 @@ video {
     display: none
 }
 
-.h-4 {
-    height: 1rem
-}
-
 .h-5 {
     height: 1.25rem
 }
@@ -483,10 +471,6 @@ video {
 
 .w-10 {
     width: 2.5rem
-}
-
-.w-4 {
-    width: 1rem
 }
 
 .w-5 {
@@ -573,28 +557,12 @@ video {
     border-width: 1px
 }
 
-.border-t {
-    border-top-width: 1px
-}
-
-.border-t-2 {
-    border-top-width: 2px
-}
-
 .border-\[rgba\(var\(--lp-paper-rgb\)\2c 0\.1\)\] {
     border-color: rgba(var(--lp-paper-rgb), .1)
 }
 
 .border-white\/10 {
     border-color: hsla(0, 0%, 100%, .1)
-}
-
-.border-white\/20 {
-    border-color: hsla(0, 0%, 100%, .2)
-}
-
-.border-t-\[var\(--lp-brand\)\] {
-    border-top-color: var(--lp-brand)
 }
 
 .bg-\[rgba\(var\(--lp-brand-rgb\)\2c 0\.1\)\] {
@@ -616,14 +584,6 @@ video {
 .bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255/var(--tw-bg-opacity, 1))
-}
-
-.bg-white\/10 {
-    background-color: hsla(0, 0%, 100%, .1)
-}
-
-.bg-white\/20 {
-    background-color: hsla(0, 0%, 100%, .2)
 }
 
 .bg-white\/5 {
@@ -655,11 +615,6 @@ video {
 .px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem
-}
-
-.py-2\.5 {
-    padding-top: .625rem;
-    padding-bottom: .625rem
 }
 
 .py-20 {
@@ -873,9 +828,25 @@ video {
     --lp-sub-5-on: var(--lp-paper)
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow-x: hidden;
-    max-width: 100vw
+}
+
+@supports (overflow: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
+
+@media (max-width:767px) {
+    [data-aos] {
+        transform: none !important;
+    }
 }
 
 body,
@@ -1118,10 +1089,6 @@ nav.lp-nav>div {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
-.hover\:bg-white\/20:hover {
-    background-color: hsla(0, 0%, 100%, .2)
-}
-
 .hover\:text-white:hover {
     --tw-text-opacity: 1;
     color: rgb(255 255 255/var(--tw-text-opacity, 1))
@@ -1129,17 +1096,8 @@ nav.lp-nav>div {
 
 .hover\:shadow-lg:hover {
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
-    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color)
-}
-
-.hover\:shadow-lg:hover,
-.hover\:shadow-md:hover {
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-}
-
-.hover\:shadow-md:hover {
-    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
-    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color)
 }
 
 .group:hover .group-hover\:scale-105 {
@@ -1148,19 +1106,17 @@ nav.lp-nav>div {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
-@media (min-width:640px) {
-    .sm\:grid-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr))
-    }
+#brands-grid {
+    grid-template-columns: 1fr;
 }
 
 @media (min-width:768px) {
-    .md\:grid-cols-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr))
+    #brands-grid {
+        grid-template-columns: repeat(6, 1fr);
     }
 
-    .md\:grid-cols-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr))
+    #brands-grid .brand-card {
+        grid-column: span 2;
     }
 
     .md\:pb-24 {
